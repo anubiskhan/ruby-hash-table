@@ -35,7 +35,7 @@ class HashTableTest < Minitest::Test
 
     output = hash_table.print_hash_table
 
-    assert output.include?('0 ->')
-    assert output.include?('9 -> John')
+    assert output.include?('0->')
+    assert output.include?('9->John')
   end
 end
