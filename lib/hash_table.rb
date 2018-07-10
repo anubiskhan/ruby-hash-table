@@ -30,12 +30,12 @@ class HashTable
   end
 
   def print_hash_table
-    array.each_with_index.map do | element, index |
+    p(array.each_with_index.map do | element, index |
       if element.nil?
-        "#{index} -> "
+        "#{index} -> \n"
       else
-        "#{index} -> #{element.key_list}"
+        "#{index} -> #{element.key_list} \n"
       end
-    end
+    end.join)
   end
 end
