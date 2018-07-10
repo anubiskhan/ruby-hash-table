@@ -6,6 +6,7 @@ class HashTable
   end
 
   def put(key, value)
+    return false if get(key)
     position = value % length
     if !array[position]
       array[position] = LinkedList.new

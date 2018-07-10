@@ -20,6 +20,14 @@ class HashTableTest < Minitest::Test
     assert_equal 399, hash_table.array[9].head.value
   end
 
+  def test_put_returns_false_on_duplicates
+    hash_table = HashTable.new
+    hash_table.put('John', 'John'.sum)
+    expected = hash_table.put('John', 'John'.sum)
+
+    refute expected
+  end
+
   def test_get_value_by_key
     hash_table = HashTable.new
     hash_table.put('John', 'John'.sum)
